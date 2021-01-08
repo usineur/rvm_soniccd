@@ -18,7 +18,7 @@ if(ENABLE_MPV)
 endif(ENABLE_MPV)
 
 if(NSWITCH)
-  set(CMAKE_C_FLAGS "-DGLEW_NO_GLU ${CMAKE_C_FLAGS}")
+  set(CMAKE_C_FLAGS "-fsigned-char -DGLEW_NO_GLU ${CMAKE_C_FLAGS}")
   find_package(GLEW REQUIRED)
   find_library(GLEW_LIBRARY NAMES GLEW)
   set(EXTRA_LIBS ${GLEW_LIBRARY} ${EXTRA_LIBS})
