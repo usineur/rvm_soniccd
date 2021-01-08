@@ -118,6 +118,9 @@ void MpvPlayer(char *fileName)
         switch (event.type)
         {
             case SDL_QUIT:
+                stop = true;
+                gameDone = true;
+                break;
             case SDL_KEYDOWN:
             case SDL_JOYBUTTONDOWN:
                 stop = true;

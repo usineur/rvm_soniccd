@@ -144,7 +144,7 @@ void EngineCallbacks_RetroEngineCallback(int callbackID)
             break;
         case EXIT_GAME_SELECTED:
             //Display exit prompt
-            EngineCallbacks_ConfirmationScreen(true);
+            EngineCallbacks_ExitConfirmation(true);
             break;
         case UNLOCK_FULL_GAME_SELECTED:
         {
@@ -191,7 +191,7 @@ void EngineCallbacks_ConfirmationScreen(bool yes)
 }
 void EngineCallbacks_ExitConfirmation(bool yes)
 {
-    
+    gameDone = yes;
 }
 void EngineCallbacks_StartupRetroEngine()
 {

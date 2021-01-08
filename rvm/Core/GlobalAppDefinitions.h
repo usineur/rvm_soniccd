@@ -49,6 +49,7 @@ extern char gameDescriptionText[256];
 extern char gamePlatform[];
 extern char gameRenderType[];
 extern char gameHapticsSetting[];
+extern bool gameDone;
 extern uint8_t gameMode;
 extern uint8_t gameLanguage;
 extern int gameMessage;

@@ -139,13 +139,12 @@ void HandleNextFrame() {
 static void mainLoop()
 {
 	SDL_Event event;
-	int done = 0;
 	int fps = 60;
 	int delay = 1000 / fps;
 	int thenTicks = -1;
 	int nowTicks;
 
-	while (!done) {
+	while (!gameDone) {
 
 		/* Check for events */
 		while (SDL_PollEvent(&event)) {
@@ -158,7 +157,7 @@ static void mainLoop()
 				//DumpTexBuffer();
 				break;
 			case SDL_QUIT:
-				done = 1;
+				gameDone = true;
 				break;
 			default:
 				break;

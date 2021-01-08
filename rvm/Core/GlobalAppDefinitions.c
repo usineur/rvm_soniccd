@@ -42,6 +42,7 @@ char gameDescriptionText[256];
 char gamePlatform[] = "Mobile";
 char gameRenderType[] = "HW_Rendering";
 char gameHapticsSetting[] = "No_Haptics";
+bool gameDone;
 uint8_t gameMode;
 uint8_t gameLanguage;
 int gameMessage;
@@ -71,6 +72,7 @@ uint8_t ATanValue256[256][256];
 
 void Init_GlobalAppDefinitions()
 {
+    gameDone = false;
     gameMode = MAINGAME;
     gameLanguage = RETRO_EN;
     gameMessage = 0;
