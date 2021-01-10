@@ -98,6 +98,7 @@ void MpvPlayer(char *fileName)
 
     mpv_set_wakeup_callback(mpv, on_mpv_events, NULL);
     mpv_render_context_set_update_callback(mpv_gl, on_mpv_render_update, NULL);
+    mpv_set_option_string(mpv, "keepaspect", "no");
 
     const char *cmd[] = { "loadfile", fullName, NULL };
     mpv_command_async(mpv, 0, cmd);
